@@ -15,6 +15,23 @@ bot.on("ready", () => {
 	console.log("Bot démarré");
 });
 
+bot.on('guildMemberAdd', function (member) {
+    member.createDM().then(function (channel) {
+        return channel.send('__***:heavy_check_mark::red_circle:BIENVENUE:red_circle::heavy_check_mark:***__' + member.displayName)
+ 
+    }).catch(console.error)
+})
+
+bot.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === '-info') {
+    // Send the user's avatar URL
+    message.reply('ton avatar est '+message.author.avatarURL);
+    message.reply('ton id est '+message.author.id);
+    message.reply('ton pseudo est '+message.author.username);
+  }
+});
+
 bot.on("message", (message) => {
 	
 	/*

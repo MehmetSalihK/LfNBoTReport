@@ -15,13 +15,6 @@ bot.on("ready", () => {
 	console.log("Bot démarré");
 });
 
-bot.on("ready", async () => {
-
-	console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-	bot.user.setActivity("NDNG - Mehmet60", {type: "WATCHING"});
-  
-});
-
 bot.on('guildMemberAdd', function (member) {
     member.createDM().then(function (channel) {
         return channel.send('__***:heavy_check_mark::red_circle:BIENVENUE:red_circle::heavy_check_mark:***__' + member.displayName)

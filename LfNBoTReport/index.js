@@ -31,11 +31,11 @@ bot.on('guildMemberAdd', function (member) {
 
 bot.on('message', message => {
   // If the message is "what is my avatar"
-  if (message.content === '-info') {
+  if (message.content === '-info').then(d_msg => { d_msg.delete(8990); }); {
     // Send the user's avatar URL
-    message.reply('ton avatar est '+message.author.avatarURL);
-    message.reply('ton id est '+message.author.id);
-    message.reply('ton pseudo est '+message.author.username);
+    message.reply('ton avatar est '+message.author.avatarURL).then(d_msg => { d_msg.delete(8990); });
+    message.reply('ton id est '+message.author.id).then(d_msg => { d_msg.delete(8990); });
+    message.reply('ton pseudo est '+message.author.username).then(d_msg => { d_msg.delete(8990); });
   }
 });
 

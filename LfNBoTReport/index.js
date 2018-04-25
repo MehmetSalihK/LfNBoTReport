@@ -17,7 +17,7 @@ bot.on("ready", () => {
 
 bot.on('guildMemberAdd', function (member) {
     member.createDM().then(function (channel) {
-        return channel.send('__***:heavy_check_mark::red_circle:BIENVENUE:red_circle::heavy_check_mark:***__' +n\ member.displayName)
+        return channel.send('__***:heavy_check_mark::red_circle:BIENVENUE:red_circle::heavy_check_mark:***__' +\n member.displayName)
  
     }).catch(console.error)
 })

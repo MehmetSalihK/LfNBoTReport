@@ -31,7 +31,7 @@ bot.on('guildMemberAdd', function (member) {
 
 bot.on('message', message => {
   // If the message is "what is my avatar"
-  if (message.content === '-info').then(d_msg => { d_msg.delete(8990); }); {
+  if (message.content === '-info') {
     // Send the user's avatar URL
     message.reply('ton avatar est '+message.author.avatarURL);
     message.reply('ton id est '+message.author.id);

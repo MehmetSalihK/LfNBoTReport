@@ -22,6 +22,15 @@ bot.on('guildMemberAdd', function (member) {
     }).catch(console.error)
 })
 
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('438915157331017728').send('**' + member.user.username + '**, A Rejoint la familles NDNG!'); 
+});
+
+bot.on('guildMemberRemove', member => {
+    member.guild.channels.get('438922961165221898').send('**' + member.user.username + "**, A Quitter | n'est plus notre familles NDNG");
+    //
+});
+
 bot.on("message", (message) => {
 	
 	/*

@@ -16,7 +16,7 @@ bot.on("ready", () => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "📈à-rejoin📈").send(`**Bienvenue à** __**${member.guild.name}**__ **maintenant __**${member.user.username}**__ est avec nous!`)
+    member.guild.channels.find("name", "📈à-rejoin📈").send(`**Bienvenue à** __**${member.guild.name}**__ **maintenant** __**${member.user.username}**__ **est avec nous!**`)
 })
 
 bot.on("guildMemberRemove", member => {

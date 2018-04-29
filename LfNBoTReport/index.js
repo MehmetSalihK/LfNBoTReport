@@ -16,11 +16,11 @@ bot.on("ready", () => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "💾général💾").send(`"Bienvenue à: " + ${member.guild.name} + " J'espère que vous l'apprécierez ici"`)
+    member.guild.channels.find("name", "📈à-rejoin📈").send(`"Bienvenue à ${member.guild.name} maintenant avec nous la familles NDNG!"`)
 })
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "📉à-quitter📉").send(`Au revoir: " + ${member.user.username} + " de " + ${member.guild.name}`)
+    member.guild.channels.find("name", "📉à-quitter📉").send(`Quitte ${member.user.username} n'est plus sur notre serveur ${member.guild.name}`)
 })
 
 bot.on('guildMemberAdd', member => {

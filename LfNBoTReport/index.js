@@ -15,6 +15,19 @@ bot.on("ready", () => {
 	console.log("Bot démarré");
 });
 
+bot.on("guildMemberAdd", member => {
+    member.guild.channels.find("name", "💾général💾").send(`"Bienvenue à: " + ${member.guild.name} + " J'espère que vous l'apprécierez ici"`)
+})
+
+bot.on("guildMemberRemove", member => {
+    member.guild.channels.find("name", "📉à-quitter📉").send(`Au revoir: " + ${member.user.username} + " de " + ${member.guild.name}`)
+})
+
+bot.on('guildMemberAdd', member => {
+    var role = member.guild.roles.find("name", "✓NDNG✓");
+    member.addRole(role)
+})
+
 bot.on('guildMemberAdd', function (member) {
     member.createDM().then(function (channel) {
         return channel.send('__***:heavy_check_mark::red_circle:BIENVENUE:red_circle::heavy_check_mark:***__\n***Pour les commandes***\n-help')
